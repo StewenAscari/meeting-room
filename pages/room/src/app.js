@@ -7,14 +7,19 @@ const onload = () => {
   const room = urlParams.get('room');
   console.log('this is the room', room)
 
-  const sockerUrl = 'http://localhost:3000'
+  // const sockerUrl = 'http://localhost:3000'
+
+  const sockerUrl = 'https://serene-brook-26381.herokuapp.com/'
+
   const socketBuilder = new SocketBuilder({sockerUrl})
 
   const peerConfig = Object.values({
     id:undefined,
     config: {
-      port: 9000,
-      host: 'localhost',
+      host: 'whispering-shore-64881.herokuapp.com',
+      secure: true,
+      // port: 9000,
+      // host: 'localhost',
       path: '/'
     }
 
